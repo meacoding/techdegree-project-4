@@ -1,0 +1,30 @@
+//=================================
+//  Base
+//=================================
+
+:root {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.grid__row {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+// nav
+.nav {
+    .nav__item {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+    }
+    
+}
