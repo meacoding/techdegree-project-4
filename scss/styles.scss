@@ -3,4 +3,19 @@
 //=================================
 
 @import 'variables',
-        'base';
+'navigation';
+
+//  Global
+:root {
+        font-family: "Helvetica Neue", sans-serif;
+        color: $color-text-dark;
+}
+
+.container {
+        width: 85%;
+        margin: 0 auto;
+
+        @media (min-width: 769px) {
+                width: 75%;
+        }
+}

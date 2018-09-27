@@ -1,0 +1,96 @@
+//=================================
+//  NAVIGATION
+//=================================
+
+//  Entire nav container
+.grid__row {
+  margin-top: 50px;
+  box-sizing: border-box;
+
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media (min-width: 769px) {}
+
+
+  //  Logo container
+  .grid__col--3 {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 769px) {
+      padding-left: 40px;
+      flex: 3;
+    }
+  }
+
+  //  Nav buttons container
+  .grid__col--9 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    @media (min-width: 769px) {
+      flex: 9;
+      justify-content: center;
+    }
+  }
+}
+
+// Actual nav element
+nav {
+  flex: 1;
+
+  @media (min-width: 769px) {
+    flex: none;
+  }
+
+  // ul child of nav element
+  .nav {
+    padding: 0;
+
+    @media (min-width: 769px) {
+      display: flex;
+    }
+
+    // li child of ul element
+    .nav__item {
+      display: flex;
+      height: 50px;
+      padding: 0;
+      list-style: none;
+      border-radius: 5px;
+
+      @media (min-width: 769px) {
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &:active,
+      &:hover {
+        background-color: $color-nav;
+      }
+
+      //  Nav links child of ul element
+      a {
+        display: flex;
+        text-decoration: none;
+        color: $color-text-dark;
+        padding: 0 20px;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+        &:active,
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
