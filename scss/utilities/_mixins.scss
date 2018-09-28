@@ -1,0 +1,16 @@
+//=================================
+//  Mixins
+//=================================
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin queries {
+}
+
+// @media (min-width: 769px) {
+//   padding-left: 40px;
+//   flex: 3;
+// }

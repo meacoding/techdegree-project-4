@@ -1,21 +1,5 @@
 //=================================
-//  Partial Imports
+//  Styles Import
 //=================================
 
-@import 'variables',
-'navigation';
-
-//  Global
-:root {
-        font-family: "Helvetica Neue", sans-serif;
-        color: $color-text-dark;
-}
-
-.container {
-        width: 85%;
-        margin: 0 auto;
-
-        @media (min-width: 769px) {
-                width: 75%;
-        }
-}
+@import "utilities/_index.scss", "base/_index.scss", "components/_index.scss";

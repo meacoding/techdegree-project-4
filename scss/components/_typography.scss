@@ -1,0 +1,40 @@
+//=================================
+//  Typography
+//=================================
+
+// .container
+// .link
+// .blockquote
+// .headline--primary
+// .headline--secondary
+
+h1.headline--primary {
+  color: $color-headline-primary;
+  line-height: 1;
+  font-size: 1.9em;
+  margin-bottom: 35px;
+  padding-left: 20px;
+}
+
+h4.headline--secondary {
+  font-weight: normal;
+}
+
+.link {
+  color: $color-link;
+  text-decoration: none;
+}
+
+.blockquote {
+  margin-top: 30px;
+  padding-left: 25px;
+  font-size: 1.3em;
+  line-height: 1.2;
+  font-style: italic;
+  border-left: 10px solid $color-blockquote;
+  border-radius: 5px;
+}
+
+.card {
+  margin-bottom: 80px;
+}

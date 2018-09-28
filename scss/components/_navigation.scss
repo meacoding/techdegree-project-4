@@ -1,44 +1,8 @@
 //=================================
-//  NAVIGATION
+//  Navigation
 //=================================
 
-//  Entire nav container
-.grid__row {
-  margin-top: 50px;
-  box-sizing: border-box;
-
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  @media (min-width: 769px) {}
-
-
-  //  Logo container
-  .grid__col--3 {
-    display: flex;
-    justify-content: center;
-
-    @media (min-width: 769px) {
-      padding-left: 40px;
-      flex: 3;
-    }
-  }
-
-  //  Nav buttons container
-  .grid__col--9 {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-
-    @media (min-width: 769px) {
-      flex: 9;
-      justify-content: center;
-    }
-  }
-}
+// .nav__item
 
 // Actual nav element
 nav {
@@ -93,4 +57,8 @@ nav {
       }
     }
   }
+}
+
+.card {
+  margin-top: 100px;
 }
