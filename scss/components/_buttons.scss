@@ -8,3 +8,25 @@
 // .btn--warning
 // .btn--info
 // .theme__colors
+
+@each $btn, $color in $btns {
+  .btn--#{$btn} {
+    text-transform: uppercase;
+    color: #fff;
+    width: 100%;
+    border: none;
+    font-size: 0.8em;
+    margin-top: 13px;
+    margin-bottom: 13px;
+
+    @include mq {
+      width: auto;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.theme__colors {
+  @include button($btns, $button);
+}

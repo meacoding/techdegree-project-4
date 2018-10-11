@@ -4,13 +4,23 @@
 
 @mixin flex {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
-@mixin queries {
+@mixin button($map, $class) {
+  @each $btn, $color in $map {
+    &#{$class}#{$btn} {
+      background-color: $color;
+      height: 45px;
+      padding: 0 50px;
+      align-items: center;
+      border-radius: 5px;
+    }
+  }
 }
 
-// @media (min-width: 769px) {
-//   padding-left: 40px;
-//   flex: 3;
-// }
+@mixin mq {
+  @media (min-width: $break-m) {
+    @content;
+  }
+}

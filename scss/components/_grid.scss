@@ -21,52 +21,45 @@
 .container {
   line-height: 1.5;
   font-size: 1.1em;
-
   width: 85%;
   margin: 0 auto;
 
-  @media (min-width: 769px) {
+  @include mq {
     width: 75%;
   }
 }
 
 .grid__row {
-  margin-top: 50px;
+  margin-top: 43px;
   box-sizing: border-box;
 
-  @media (min-width: 769px) {
+  @include mq {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
+}
 
-  .grid__col--2,
-  .grid__col--3,
-  .grid__col--4,
-  .grid__col--5,
-  .grid__col--6,
-  .grid__col--7,
-  .grid__col--8,
-  .grid__col--9,
-  .grid__col--10,
-  .grid__col--11,
-  .grid__col--12 {
+@each $grid-width in $grid-widths {
+  #{$grid}#{$grid-width} {
+    flex: #{$grid-width};
     @include flex;
+    margin: 7px 0;
+    justify-content: space-between;
+    @include mq {
+      margin: 7px;
+    }
   }
 }
 
-.grid__col--12 {
-  background-color: $color-col-12;
-  height: 45px;
-  flex: 12;
+.theme__colors {
+  @include button($themes, $grid);
+
+  @include mq {
+    justify-content: center;
+  }
 }
 
-.grid__col--9 {
-  display: flex;
+.centered {
   justify-content: center;
-  margin: 30px auto 0;
-
-  @media (min-width: 769px) {
-    flex: 9;
-  }
 }
