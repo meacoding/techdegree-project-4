@@ -12,15 +12,14 @@
     &#{$class}#{$btn} {
       background-color: $color;
       height: 45px;
-      padding: 0 50px;
       align-items: center;
       border-radius: 5px;
     }
   }
 }
 
-@mixin mq {
-  @media (min-width: $break-m) {
+@mixin mq($break) {
+  @media (min-width: $break) {
     @content;
   }
 }

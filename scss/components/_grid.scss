@@ -23,8 +23,9 @@
   font-size: 1.1em;
   width: 85%;
   margin: 0 auto;
+  padding-bottom: 40px;
 
-  @include mq {
+  @include mq($break-m) {
     width: 75%;
   }
 }
@@ -33,7 +34,7 @@
   margin-top: 43px;
   box-sizing: border-box;
 
-  @include mq {
+  @include mq($break-m) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -46,7 +47,7 @@
     @include flex;
     margin: 7px 0;
     justify-content: space-between;
-    @include mq {
+    @include mq($break-m) {
       margin: 7px;
     }
   }
@@ -55,7 +56,7 @@
 .theme__colors {
   @include button($themes, $grid);
 
-  @include mq {
+  @include mq($break-m) {
     justify-content: center;
   }
 }

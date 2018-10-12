@@ -18,15 +18,28 @@
     font-size: 0.8em;
     margin-top: 13px;
     margin-bottom: 13px;
-
-    @include mq {
-      width: auto;
-      margin-left: 15px;
-      margin-right: 15px;
-    }
   }
 }
 
 .theme__colors {
   @include button($btns, $button);
+  @include mq($break-m) {
+    width: 18%;
+  }
+  @include mq($break-xl) {
+    width: auto;
+    padding: 0 50px;
+  }
+}
+
+.btn--default {
+  @include mq($break-xl) {
+    margin-left: 30px;
+  }
+}
+
+.btn--info {
+  @include mq($break-xl) {
+    margin-right: 30px;
+  }
 }

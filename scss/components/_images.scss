@@ -6,6 +6,20 @@
 // .img--frame
 // .img--avatar
 
+.img--frame,
 .img--avatar {
-  margin-top: 20px;
+  margin: 15px auto;
+  display: block;
+}
+
+.img--frame {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 435px;
+  height: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.img--avatar {
 }
