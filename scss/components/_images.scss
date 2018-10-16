@@ -9,6 +9,10 @@
 .img--logo {
   display: block;
   margin: 0 auto;
+
+  @include mq ($break-l) {
+    margin-left: 40px;
+  }
 }
 
 .img--frame,

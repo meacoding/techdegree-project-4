@@ -4,39 +4,42 @@
 
 // .nav__item
 
-// Actual nav element
-// nav {
-// flex: 1;
-
-// @media (min-width: 769px) {
-//   flex: none;
-// }
-
 // ul child of nav element
 .nav {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 769px) {
+  @include mq ($break-m) {
     display: flex;
+  }
+
+  @include mq ($break-l) {
+    margin-left: 100px;
+  }
+
+  @include mq ($break-xl) {
+    margin-left: 150px;
   }
 
   // li child of ul element
   .nav__item {
     display: flex;
+    justify-content: flex-end;
     height: 50px;
-    padding: 0 20px;
     list-style: none;
     border-radius: 5px;
     color: $color-text-dark;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
 
-    @media (min-width: 769px) {
+    @include mq ($break-m) {
       height: 40px;
       justify-content: center;
       align-items: center;
+    }
+
+    @include mq ($break-l) {
+      margin-left: 25px;
     }
 
     &:active,
@@ -44,11 +47,16 @@
       background-color: $color-nav;
     }
 
+    &:first-child {
+      background-color: $color-nav;
+      color: #fff;
+    }
+
     //  Nav links child of ul element
     * {
       display: flex;
       text-decoration: none;
-      padding: 0 20px;
+      padding: 0 10px;
       width: 100%;
       height: 100%;
       justify-content: center;
