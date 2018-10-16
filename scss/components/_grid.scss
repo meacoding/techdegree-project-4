@@ -26,7 +26,7 @@
   padding-bottom: 40px;
 
   @include mq($break-m) {
-    width: 75%;
+    width: 80%;
   }
 }
 
@@ -44,10 +44,11 @@
 @each $grid-width in $grid-widths {
   #{$grid}#{$grid-width} {
     flex: #{$grid-width};
-    @include flex;
     margin: 7px 0;
     justify-content: space-between;
+    align-self: flex-start;
     @include mq($break-m) {
+      @include flex;
       margin: 7px;
     }
   }
@@ -55,6 +56,9 @@
 
 .theme__colors {
   @include button($themes, $grid);
+  @include flex;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @include mq($break-m) {
     justify-content: center;
@@ -62,5 +66,13 @@
 }
 
 .centered {
-  justify-content: center;
+  @include mq($break-m) {
+    justify-content: center;
+  }
+}
+
+.card {
+  @include mq($break-m) {
+    margin-right: 5%;
+  }
 }

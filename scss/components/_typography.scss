@@ -8,7 +8,7 @@
 // .headline--primary
 // .headline--secondary
 
-h1.headline--primary {
+.headline--primary {
   color: $color-headline-primary;
   line-height: 1;
   font-size: 1.9em;
@@ -16,13 +16,15 @@ h1.headline--primary {
   padding-left: 20px;
 }
 
-h4.headline--secondary {
+.headline--secondary {
   font-weight: normal;
+  margin: 1.33em 0;
 }
 
 .link {
   color: $color-link;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .blockquote {
@@ -33,8 +35,8 @@ h4.headline--secondary {
   font-style: italic;
   border-left: 10px solid $color-blockquote;
   border-radius: 5px;
-}
 
-.card {
-  margin-bottom: 80px;
+  @include mq($break-m) {
+    padding-left: 40px;
+  }
 }

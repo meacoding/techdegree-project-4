@@ -18,28 +18,38 @@
     font-size: 0.8em;
     margin-top: 13px;
     margin-bottom: 13px;
+    justify-content: space-evenly;
+
+    // @include mq($break-m) {
+    //   width: inherit;
+    //   // padding: 0 5%;
+    // }
   }
 }
 
 .theme__colors {
   @include button($btns, $button);
   @include mq($break-m) {
-    width: 18%;
+    flex-grow: 1;
+    width: inherit;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   @include mq($break-xl) {
-    width: auto;
     padding: 0 50px;
+    // margin-left: 30px;
+    // margin-right: 30px;
   }
 }
 
 .btn--default {
   @include mq($break-xl) {
-    margin-left: 30px;
+    // margin-left: 30px;
   }
 }
 
 .btn--info {
   @include mq($break-xl) {
-    margin-right: 30px;
+    // margin-right: 30px;
   }
 }

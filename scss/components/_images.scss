@@ -6,6 +6,11 @@
 // .img--frame
 // .img--avatar
 
+.img--logo {
+  display: block;
+  margin: 0 auto;
+}
+
 .img--frame,
 .img--avatar {
   margin: 15px auto;
@@ -15,11 +20,8 @@
 .img--frame {
   box-sizing: border-box;
   width: 100%;
-  max-width: 435px;
   height: 100%;
+  max-width: 435px;
   padding: 15px;
   border: 1px solid #ccc;
-}
-
-.img--avatar {
 }
