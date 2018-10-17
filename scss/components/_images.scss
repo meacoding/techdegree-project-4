@@ -10,14 +10,14 @@
   display: block;
   margin: 0 auto;
 
-  @include mq ($break-l) {
+  @include mq($break-l) {
     margin-left: 40px;
   }
 }
 
 .img--frame,
 .img--avatar {
-  margin: 15px auto;
+  margin: 35px auto;
   display: block;
 }
 

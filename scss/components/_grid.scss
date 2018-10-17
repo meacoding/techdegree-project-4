@@ -19,12 +19,17 @@
 //     .theme__colors
 
 .container {
+  font-family: $font;
+  color: $color-text-dark;
   line-height: 1.5;
-  font-size: 1.1em;
   width: 85%;
   max-width: 1100px;
   margin: 0 auto;
   padding-bottom: 40px;
+
+  @include mq($break-m) {
+    padding-bottom: 100px;
+  }
 }
 
 .grid__row {
@@ -32,7 +37,7 @@
   box-sizing: border-box;
 
   @include mq($break-m) {
-    display: flex;
+    @include flex;
     flex-direction: row;
     align-items: center;
   }
@@ -41,12 +46,13 @@
 @each $grid-width in $grid-widths {
   #{$grid}#{$grid-width} {
     flex: #{$grid-width};
-    margin: 7px 0;
-    justify-content: space-between;
-    align-self: flex-start;
+    // margin: 7px 0;
+    // justify-content: space-between;
+    // align-self: flex-start;
+    @extend %button-mixin-grids;
     @include mq($break-m) {
       @include flex;
-      margin: 7px;
+      margin: auto 7px;
     }
   }
 }
@@ -56,6 +62,7 @@
   @include flex;
   padding-left: 10px;
   padding-right: 10px;
+  font-weight: bold;
 
   @include mq($break-m) {
     justify-content: center;
@@ -64,6 +71,8 @@
 
 .centered {
   @include mq($break-m) {
+    @include margin-hor(auto);
+    max-width: calc(100% * 7 / 12);
     justify-content: center;
   }
 }

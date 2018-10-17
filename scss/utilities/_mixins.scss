@@ -4,16 +4,16 @@
 
 @mixin flex {
   display: flex;
-  flex-wrap: wrap;
 }
 
 @mixin button($map, $class) {
   @each $btn, $color in $map {
     &#{$class}#{$btn} {
       background-color: $color;
-      height: 45px;
-      align-items: center;
-      border-radius: 5px;
+      // height: 45px;
+      // align-items: center;
+      // border-radius: 5px;
+      @extend %button-mixin-base;
     }
   }
 }
@@ -22,4 +22,14 @@
   @media (min-width: $break) {
     @content;
   }
+}
+
+@mixin margin-hor($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin perfect-center {
+  justify-content: center;
+  align-items: center;
 }
