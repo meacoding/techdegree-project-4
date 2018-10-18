@@ -18,6 +18,9 @@
 }
 
 @mixin mq($break) {
+  @if unitless($break) {
+    @error "$break may not be unitless, was #{$break}.";
+  }
   @media (min-width: $break) {
     @content;
   }
