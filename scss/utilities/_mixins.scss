@@ -2,17 +2,16 @@
 //  Mixins
 //=================================
 
-@mixin flex {
+@mixin flex($direct: null, $wrap: null) {
   display: flex;
+  flex-direction: $direct;
+  flex-wrap: $wrap;
 }
 
 @mixin button($map, $class) {
   @each $btn, $color in $map {
     &#{$class}#{$btn} {
       background-color: $color;
-      // height: 45px;
-      // align-items: center;
-      // border-radius: 5px;
       @extend %button-mixin-base;
     }
   }
