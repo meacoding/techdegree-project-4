@@ -1,6 +1,6 @@
 # UI Kit - Techdegree FEWD Project 4
 
-UI Kit styled with SASS.
+UI kit styled with SASS.
 
 ![mockup-ipad-p4-50](https://user-images.githubusercontent.com/16675876/59818247-10e92800-92f1-11e9-8cd2-f43e9fe253ca.png)
 
@@ -20,7 +20,7 @@ The webpage is mobile-first responsive. Styled with SASS. Matches provided mocku
  
 ## Backstory
 
-This project is an exercise in SASS. At this point it was all new to me. Once I got all my individual SASS files setup I found them easy to navigate. It makes large-scale styling easier and cleaner to manage.
+This project is an exercise in SASS. At this point it was all new to me. Once I got all my individual SASS files setup I found them easy to navigate. It makes large-scale styling cleaner and easier to manage.
 
 ## License
 None.
